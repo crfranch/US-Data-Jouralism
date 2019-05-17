@@ -108,4 +108,31 @@ d3.csv("assets/data/data.csv")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
       .attr("class", "axisText")
       .text("In Poverty (%)");
-  });
+    }
+  })
+});
+  
+  // // updateToolTip function above csv import
+  // // var stateCircles = updateToolTip(chosenXAxis, stateCircles);
+
+  // // x axis labels event listener
+  //   chartGroup.selectAll("text")
+  //   .on("click", function() {
+  //     // get value of selection
+  //     var value = d3.select(this).attr("value");
+  //     if (value !== chosenXAxis) {
+
+  //       // replaces chosenXAxis with value
+  //       chosenXAxis = value;
+
+  //       // updates x scale for new data
+  //       xPovertyScale = xPovertyScale(censusData, chosenXAxis);
+
+  //       // updates x axis with transition
+  //       xAxis = renderAxes(xPovertyScale, xAxis);
+
+  //       // updates circles with new x values
+  //       stateCircles = renderCircles(stateCircles, xPovertyScale, chosenXAxis);
+
+  //       // updates tooltips with new info
+  //       // stateCircles = updateToolTip(chosenXAxis, stateCircles);
