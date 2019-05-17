@@ -112,27 +112,27 @@ d3.csv("assets/data/data.csv")
   })
 });
   
-  // // updateToolTip function above csv import
-  // // var stateCircles = updateToolTip(chosenXAxis, stateCircles);
+  // updateToolTip function above csv import
+  var stateCircles = circlesGroup(chosenXAxis, stateCircles);
 
-  // // x axis labels event listener
-  //   chartGroup.selectAll("text")
-  //   .on("click", function() {
-  //     // get value of selection
-  //     var value = d3.select(this).attr("value");
-  //     if (value !== chosenXAxis) {
+  // x axis labels event listener
+    chartGroup.selectAll("text")
+    .on("click", function() {
+      // get value of selection
+      var value = d3.select(this).attr("value");
+      if (value !== chosenXAxis) {
 
-  //       // replaces chosenXAxis with value
-  //       chosenXAxis = value;
+        // replaces chosenXAxis with value
+        chosenXAxis = value;
 
-  //       // updates x scale for new data
-  //       xPovertyScale = xPovertyScale(censusData, chosenXAxis);
+        // updates x scale for new data
+        xPovertyScale = xPovertyScale(JournalismData, chosenXAxis);
 
-  //       // updates x axis with transition
-  //       xAxis = renderAxes(xPovertyScale, xAxis);
+        // updates x axis with transition
+        xAxis = renderAxes(xPovertyScale, xAxis);
 
-  //       // updates circles with new x values
-  //       stateCircles = renderCircles(stateCircles, xPovertyScale, chosenXAxis);
+        // updates circles with new x values
+        stateCircles = renderCircles(stateCircles, xPovertyScale, chosenXAxis);
 
-  //       // updates tooltips with new info
-  //       // stateCircles = updateToolTip(chosenXAxis, stateCircles);
+        // updates tooltips with new info
+        stateCircles = circlesGroup(chosenXAxis, stateCircles);
